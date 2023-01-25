@@ -2,11 +2,8 @@
  * External dependencies
  */
 import { __ } from '@wordpress/i18n';
-import { Card, CardBody } from '@wordpress/components';
-import {
-	__experimentalWooProductSectionItem as WooProductSectionItem,
-	__experimentalProductFieldSection as ProductFieldSection,
-} from '@woocommerce/components';
+import { __experimentalWooProductSectionItem as WooProductSectionItem } from '@woocommerce/components';
+import { __experimentalProductFieldSection as ProductFieldSection } from '@woocommerce/product-editor';
 import { ProductFormSection } from '@woocommerce/data';
 
 export const Sections: React.FC< { sections: ProductFormSection[] } > = ( {
