@@ -31,6 +31,7 @@ import {
 	SHIPPING_SECTION_BASIC_ID,
 	SHIPPING_SECTION_DIMENSIONS_ID,
 	TAB_SHIPPING_ID,
+	VARIANT_TAB_SHIPPING_ID,
 } from '../constants';
 import {
 	ShippingDimensionsImage,
@@ -70,11 +71,15 @@ const ShippingSection = () => {
 		suffix: dimensionUnit,
 	};
 
+	// TODO: Add insertion points (children?) within `tabs` config to allow you to have different slots per tab.
 	return (
 		<>
 			<WooProductSectionItem
 				id={ SHIPPING_SECTION_BASIC_ID }
-				tabs={ [ { name: TAB_SHIPPING_ID, order: 1 } ] }
+				tabs={ [
+					{ name: TAB_SHIPPING_ID, order: 1 },
+					{ name: VARIANT_TAB_SHIPPING_ID, order: 1 },
+				] }
 				pluginId={ PLUGIN_ID }
 			>
 				<ProductSectionLayout
